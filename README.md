@@ -1,2 +1,2 @@
 # petcure
-Landing page para uma clinica veterinária
+Landing Page para uma clinica veterinária
