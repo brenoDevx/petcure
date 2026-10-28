@@ -1,7 +1,9 @@
+import Header from "./components/Header/Header";
+
 function App() {
   return (
     <main>
-      <h1>PetCure</h1>
+      <Header />
     </main>
   );
 }
