@@ -1,0 +1,128 @@
+.services {
+    padding: 4rem 1rem;
+}
+
+.services__container {
+    width: min(1120px, 100%);
+    margin-inline: auto;
+}
+
+.services h2 span {
+    color: var(--blue-500, #4f7fb5);
+}
+
+/* Carrossel horizontal */
+
+.services__grid {
+    display: flex;
+    gap: 1.5rem;
+
+    list-style: none;
+    margin: 2rem 0 1.5rem;
+    padding: 0.25rem 0 1rem;
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.services__grid::-webkit-scrollbar {
+    display: none;
+}
+
+/* Cards */
+
+.service-card {
+    flex: 0 0 calc((100% - 3rem) / 3);
+    min-width: 0;
+
+    background: var(--green-100, #eaf4f0);
+    border-radius: 16px;
+    padding: 1.5rem;
+
+    box-shadow: 0 8px 24px rgba(31, 61, 51, 0.08);
+    scroll-snap-align: start;
+
+    transition: transform 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+}
+
+.service-card__icon {
+    display: inline-grid;
+    place-items: center;
+
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+
+    background: #fff;
+    margin-bottom: 0.75rem;
+}
+
+.service-card__icon img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.service-card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.15rem;
+}
+
+.service-card p {
+    margin: 0;
+    color: var(--muted, #5b6f68);
+    line-height: 1.6;
+}
+
+/* Indicador de progresso */
+
+.services__progress {
+    width: 100%;
+    height: 6px;
+
+    background: #e5eee9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.services__progress-bar {
+    height: 100%;
+    width: 0;
+
+    background: var(--green-700, #107b4f);
+    border-radius: inherit;
+
+    transition: width 0.1s linear;
+}
+
+/* Tablet */
+
+@media (max-width: 959px) {
+    .service-card {
+        flex-basis: calc((100% - 1.5rem) / 2);
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 639px) {
+    .services {
+        padding: 3rem 1rem;
+    }
+
+    .services__grid {
+        gap: 1rem;
+    }
+
+    .service-card {
+        flex-basis: 85%;
+        padding: 1.25rem;
+    }
+}

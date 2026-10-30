@@ -1,7 +1,9 @@
+import Services from "./components/Services/Services";
+
 function App() {
   return (
     <main>
-      <h1>PetCure</h1>
+      <Services />
     </main>
   );
 }
