@@ -1,11 +1,10 @@
-import { useEffect, useRef, useState } from "react";
-
-import stethoscopeIcon from "../../assets/icons/icon-stethoscope.svg";
 import syringeIcon from "../../assets/icons/icon-syringe.svg";
 import microscopeIcon from "../../assets/icons/icon-microscope.svg";
 import heartbeatIcon from "../../assets/icons/icon-heartbeat.svg";
 import shieldIcon from "../../assets/icons/icon-shield-check.svg";
 import boneIcon from "../../assets/icons/icon-bone.svg";
+import groomingIcon from "../../assets/icons/icon-dog-grooming.svg";
+import pawIcon from "../../assets/icons/icon-dog-paw.svg";
 
 import "./Services.css";
 
@@ -16,11 +15,6 @@ type Service = {
 };
 
 const SERVICES: Service[] = [
-    {
-        title: "Consultas veterinárias",
-        icon: stethoscopeIcon,
-        description: "Avaliação completa da saúde do seu pet, com diagnóstico e orientação personalizada em cada fase da vida."
-    },
     {
         title: "Vacinação",
         icon: syringeIcon,
@@ -46,79 +40,48 @@ const SERVICES: Service[] = [
         icon: boneIcon,
         description: "Orientações sobre alimentação equilibrada, porções adequadas e necessidades nutricionais de acordo com a idade e as características do animal."
     },
+    {
+        title: "Banho e higiene",
+        icon: groomingIcon,
+        description: "Cuidados com a higiene e o bem-estar dos pets, incluindo limpeza, escovação e orientações para manter a pelagem e a pele saúdaveis."
+    },
 ];
 
 export default function Services() {
-    const carouselRef = useRef<HTMLUListElement>(null);
-    const [progress, setProgress] = useState(0);
-    useEffect(() => {
-        const carousel = carouselRef.current;
-
-        if (!carousel) return;
-
-        const updateProgress = () => {
-            const maxScroll = carousel.scrollWidth - carousel.clientWidth;
-
-            if (maxScroll <= 0) {
-                setProgress(100);
-                return;
-            }
-
-            const currentProgress =
-                (carousel.scrollLeft / maxScroll) * 100;
-
-            setProgress(currentProgress);
-        };
-
-        updateProgress();
-
-        carousel.addEventListener("scroll", updateProgress);
-
-        const resizeObserver = new ResizeObserver(updateProgress);
-        resizeObserver.observe(carousel);
-
-        return () => {
-            carousel.removeEventListener("scroll", updateProgress);
-            resizeObserver.disconnect();
-        };
-    }, []);
-
     return (
         <section id="servicos" className="services">
             <div className="services__container">
-                <h2>Nossos <span>serviços</span></h2>
+                <h2>
+                    Nossos <span>serviços</span>
+                </h2>
 
                 <ul
                     className="services__grid"
-                    ref={carouselRef}
-                    tabIndex={0}
                     aria-label="Lista de serviços veterinários"
                 >
                     {SERVICES.map(({ title, description, icon }) => (
                         <li key={title} className="service-card">
                             <span className="service-card__icon">
-                                <img src={icon} alt="" aria-hidden="true" />
+                                <img
+                                    src={icon}
+                                    alt=""
+                                    aria-hidden="true"
+                                />
                             </span>
 
                             <h3>{title}</h3>
+
                             <p>{description}</p>
+
+                            <img
+                                className="service-card__paw"
+                                src={pawIcon}
+                                alt=""
+                                aria-hidden="true"
+                            />
                         </li>
                     ))}
                 </ul>
-
-                <div
-                    className="services__progress"
-                    role="progressbar"
-                    aria-label="Progresso da navegação pelos serviços"
-                    aria-valuemin={0}
-                    aria-valuemax={100}
-                    aria-valuenow={Math.round(progress)}
-                >
-                    <div
-                        className="services__progress-bar"
-                        style={{ width: `${progress}%` }}
-                    />
-                </div>
             </div>
         </section>
     );
