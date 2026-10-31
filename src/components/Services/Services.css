@@ -1,0 +1,158 @@
+.services {
+    padding: 3rem 1.5rem;
+    background: #ffffff;
+    font-family: "DM Sans", sans-serif;
+    scroll-margin-top: var(--header-h, 80px);
+}
+
+.services__container {
+    width: min(1120px, 100%);
+    margin-inline: auto;
+}
+
+/* Título: Livvic Bold 40px + traço verde */
+.services h2 {
+    margin: 0;
+    font-family: "Livvic", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.15;
+    color: #0f383b;
+}
+
+.services h2 span {
+    color: #4684b8;
+}
+
+.services h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 4px;
+    margin-top: 0.6rem;
+    border-radius: 2px;
+    background: #107b4f;
+}
+
+/* Mobile: 1 coluna */
+.services__grid {
+    list-style: none;
+    margin: 2rem 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+/* Card: ícone à esquerda, título e texto à direita */
+.service-card {
+    position: relative;
+    overflow: hidden;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 1rem;
+    align-items: center;
+    /* mobile: ícone centralizado, como no Canva */
+    padding: 1.25rem 3.25rem 1.5rem 1.25rem;
+    /* espaço para a patinha */
+    background: #eef8f4;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(15, 56, 59, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(15, 56, 59, 0.14);
+}
+
+.service-card__icon {
+    grid-row: 1 / span 2;
+    display: grid;
+    place-items: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: #daefe7;
+}
+
+.service-card__icon img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.service-card h3 {
+    margin: 0 0 0.25rem;
+    align-self: end;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #0d3537;
+}
+
+.service-card p {
+    margin: 0;
+    align-self: start;
+    font-size: 0.9rem;
+    /* 14,4px: legível, o Canva mobile usa ~11px */
+    line-height: 1.5;
+    color: #687b84;
+}
+
+/* Patinha decorativa, clara */
+.service-card__paw {
+    position: absolute;
+    right: 0.9rem;
+    bottom: 0.7rem;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+/* Tablet: 2 colunas */
+@media (min-width: 640px) {
+    .services {
+        padding: 4rem 1.5rem;
+    }
+
+    .services__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Desktop: grade 3x2, ícone no topo como no Canva */
+@media (min-width: 960px) {
+    .services__grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .service-card {
+        align-items: start;
+        padding: 1.1rem 3.5rem 1.5rem 1.1rem;
+    }
+
+    .service-card__icon {
+        width: 72px;
+        height: 72px;
+    }
+
+    .service-card__icon img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .service-card h3 {
+        align-self: start;
+        margin-top: 1rem;
+        font-size: 1.25rem;
+    }
+
+    .service-card p {
+        font-size: 1rem;
+    }
+}
