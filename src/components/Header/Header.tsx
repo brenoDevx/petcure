@@ -14,11 +14,16 @@ import arrowIcon from "../../assets/icons/icon-arrow-mobile-menu.svg"
 
 
 
-function Header() {
+type HeaderProps = {
+  variant?: "about-us";
+};
+
+function Header({ variant }: HeaderProps) {
   const [menuAberto, setMenuAberto] = useState(false);
+  const headerClassName = variant === "about-us" ? "header header--about-us" : "header";
 
   return (
-    <header className="header">
+    <header className={headerClassName}>
 
       <div className="header-desktop">
 

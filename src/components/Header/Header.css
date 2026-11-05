@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+.header--about-us {
+    background-color: var(--background-about-us);
+}
+
 .header-desktop {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr) auto;

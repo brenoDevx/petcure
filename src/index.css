@@ -7,6 +7,10 @@
     --ciano-escuro: #0f383b;
     --color-white: #ffffff;
     --sombra-button-hover: 0 8px 20px rgb(15 56 59 / 18%);
+    --background-about-us: #f8fbfa;
+    --azul-petcure: #4684b8;
+    --cinza-texto: #687b84;
+    --background-about-us-card: #edf7f3;
 }
 
 body {
