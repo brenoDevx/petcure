@@ -5,10 +5,13 @@ import Services from "./components/Services/Services";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Footer from "./components/Footer/Footer";
 import Gallery from "./components/Gallery/Gallery";
+import ScrollIndicator from "./components/ScrollIndicator/ScrollIndicator";
 
 function App() {
   return (
     <main>
+      <ScrollIndicator />
+
       <Header />
       <Hero />
 
