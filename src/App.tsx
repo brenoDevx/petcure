@@ -16,7 +16,6 @@ function App() {
       <Hero />
 
       <div className="about-us-page">
-        <Header variant="about-us" />
         <AboutUs />
       </div>
 

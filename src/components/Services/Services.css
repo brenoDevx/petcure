@@ -1,12 +1,12 @@
 .services {
-    padding: 3rem 1.5rem;
+    padding: clamp(3rem, 6vw, 5rem) var(--page-gutter);
     background: #ffffff;
     font-family: "DM Sans", sans-serif;
     scroll-margin-top: var(--header-h, 80px);
 }
 
 .services__container {
-    width: min(1120px, 100%);
+    width: min(var(--section-content-width), 100%);
     margin-inline: auto;
 }
 
@@ -117,7 +117,7 @@
 /* Tablet: 2 colunas */
 @media (min-width: 640px) {
     .services {
-        padding: 4rem 1.5rem;
+        padding-block: clamp(3rem, 6vw, 5rem);
     }
 
     .services__grid {

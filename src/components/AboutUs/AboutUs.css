@@ -1,18 +1,9 @@
 .about-us-page {
-    display: flex;
-    flex-direction: column;
-    min-height: 100svh;
-}
-
-.about-us-page > .about-us {
-    display: flex;
-    flex: 1 0 auto;
-    flex-direction: column;
-    justify-content: center;
+    width: 100%;
 }
 
 .about-us {
-    padding: 10.25rem clamp(24px, 4.1vw, 64px) 8.5rem;
+    padding: clamp(3.5rem, 7vw, 6.5rem) var(--page-gutter);
     background-color: var(--background-about-us);
     color: var(--ciano-escuro);
     scroll-margin-top: 1rem;
@@ -23,7 +14,7 @@
     grid-template-columns: minmax(0, 0.96fr) minmax(0, 1fr);
     grid-template-rows: auto 1fr;
     column-gap: 30px;
-    width: min(100%, 1390px);
+    width: min(100%, var(--content-max-width));
     margin: 0 auto;
 }
 
@@ -62,7 +53,7 @@
 
 .about-us__image img {
     display: block;
-    width: calc(100% + 16px);
+    width: 100%;
     height: auto;
 }
 
@@ -175,15 +166,9 @@
     }
 }
 
-@media (min-width: 845px) {
-    .header-nav a[href="#sobre"] {
-        background-color: var(--turquesa-claro);
-    }
-}
-
 @media (max-width: 1000px) {
     .about-us {
-        padding: 3rem 24px 4rem;
+        padding-block: 3rem 4rem;
     }
 
     .about-us__container {
@@ -250,7 +235,7 @@
 
 @media (max-width: 600px) {
     .about-us {
-        padding: 4px 24px 3rem;
+        padding-block: 3rem;
     }
 
     .about-us__title {
@@ -275,11 +260,4 @@
         margin-top: 2.4rem;
     }
 
-}
-
-@media (max-width: 420px) {
-    .about-us {
-        padding-right: 32px;
-        padding-left: 32px;
-    }
 }

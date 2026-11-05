@@ -16,7 +16,7 @@
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    padding: clamp(32px, 5vw, 72px) 5%;
+    padding: clamp(32px, 5vw, 72px) var(--page-gutter);
     box-sizing: border-box;
 }
 

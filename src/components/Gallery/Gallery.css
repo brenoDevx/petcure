@@ -1,14 +1,14 @@
 .gallery {
     width: 100%;
     box-sizing: border-box; 
-    padding: 4rem 5%;
+    padding: clamp(3rem, 6vw, 5rem) var(--page-gutter);
     background: #ffffff;
     font-family: "DM Sans", sans-serif;
     scroll-margin-top: var(--header-h, 80px);
 }
 
 .gallery__container {
-    max-width: 1440px;
+    max-width: var(--content-max-width);
     margin: 0 auto;
 }
 
