@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+
+:root {
+    --page-gutter: clamp(20px, 4.5vw, 64px);
+    --content-max-width: 1440px;
+    --section-content-width: 1280px;
+    --header-h: 80px;
+    --turquesa-escuro: #107b4f;
+    --turquesa-escuro-hover: #0c6943;
+    --turquesa-claro: #daefe7;
+    --ciano-escuro: #0f383b;
+    --color-white: #ffffff;
+    --sombra-button-hover: 0 8px 20px rgb(15 56 59 / 18%);
+    --background-about-us: #f8fbfa;
+    --azul-petcure: #4684b8;
+    --cinza-texto: #687b84;
+    --background-about-us-card: #edf7f3;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-padding-top: var(--header-h);
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
