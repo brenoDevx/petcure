@@ -9,7 +9,7 @@ interface WhatsAppButtonProps {
 function WhatsAppButton({className = ""}: WhatsAppButtonProps) {
     return (
         <a 
-            href="https://api.whatsapp.com/send?phone=5531993327631"
+            href="https://api.whatsapp.com/send?phone=5533984572682"
             className={`whatsapp-button whatsapp-button-${className}`}
             target="_blank"
             rel="noopener noreferrer"

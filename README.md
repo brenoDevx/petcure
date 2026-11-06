@@ -1,46 +1,136 @@
-# PetCure — Clínica Veterinária
+# 🐾 PetCure — Clínica Veterinária
 
-Landing page institucional para a **PetCure**, uma clínica veterinária fictícia, desenvolvida como parte de um desafio em grupo para a Visão Jr., empresa júnior da Universidade Federal de Ouro Preto (UFOP).
+Projeto acadêmico desenvolvido por estudantes da Universidade Federal de Ouro Preto (UFOP), como parte do desafio de desenvolvimento frontend da empresa júnior Visão Jr.
 
-O projeto apresenta a clínica, seus serviços, depoimentos e instalações, com foco em uma experiência clara e acessível em diferentes dispositivos.
+## 📋 Sumário
 
-## ✨ Funcionalidades previstas
+- [Sobre o Projeto](#-sobre-o-projeto)
+- [Acesse o PetCure](#-acesse-o-petcure)
+- [Seções do Website](#-seções-do-website)
+- [Tecnologias Utilizadas](#️-tecnologias-utilizadas)
+- [Organização do Projeto](#-organização-do-projeto)
+- [Como Executar Localmente](#️-como-executar-localmente)
 
-- Apresentação da clínica na página inicial.
-- Seção **Sobre nós**.
-- Exibição dos serviços veterinários.
-- Depoimentos de clientes.
-- Galeria de imagens dos ambientes.
-- Informações de contato e acesso ao WhatsApp.
-- Layout responsivo para desktop e dispositivos móveis.
+## 📌 Sobre o Projeto
 
-> O projeto está em desenvolvimento. Esta documentação será atualizada conforme novas funcionalidades forem implementadas.
+O PetCure é um website desenvolvido para representar a presença digital de uma clínica veterinária fictícia. A aplicação reúne informações sobre a clínica, seus serviços e experiências de clientes em uma única página.
 
-## 🛠️ Tecnologias
+O projeto foi construído com React e TypeScript, utilizando uma estrutura baseada em componentes independentes. O desenvolvimento também contemplou a adaptação da interface para diferentes dispositivos, buscando manter uma experiência consistente durante a navegação.
 
-- [React](https://react.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
-- HTML e CSS
-- [Vite](https://vite.dev/)
+## 🌐 Acesse o PetCure
 
-## 📁 Estrutura do projeto
+O website está disponível para acesso público:
 
-A estrutura pode mudar durante o desenvolvimento. Uma organização inicial pode incluir:
+👉 **[Visitar PetCure](https://petcure-ruby.vercel.app)**
+
+## ✨ Seções do Website
+
+- 🏠 **Início:** apresentação da clínica e destaque para sua proposta.
+- 🐾 **Sobre nós:** informações institucionais sobre a PetCure.
+- 🩺 **Serviços:** apresentação das especialidades e dos atendimentos oferecidos.
+- 💬 **Depoimentos:** espaço destinado às avaliações e experiências dos clientes.
+- 🖼️ **Galeria:** conteúdo visual relacionado à clínica.
+- 📍 **Rodapé:** informações complementares e meios de contato.
+- 📲 **Botão do WhatsApp:** atalho para facilitar o contato com a clínica.
+
+A interface também conta com navegação entre as seções e adaptações específicas para dispositivos móveis.
+
+## 🛠️ Tecnologias Utilizadas
+
+| Tecnologia | Aplicação no projeto |
+|---|---|
+| React | Desenvolvimento da interface e composição dos componentes. |
+| TypeScript | Tipagem e organização do código. |
+| Vite | Inicialização do ambiente de desenvolvimento e geração do build. |
+| HTML5 | Estruturação do conteúdo da aplicação. |
+| CSS3 | Estilização dos componentes e adaptação para diferentes telas. |
+| Git | Controle de versão e gerenciamento das alterações. |
+| GitHub | Armazenamento do código e colaboração entre desenvolvedores. |
+| Vercel | Hospedagem e disponibilização do website. |
+
+## 📁 Organização do Projeto
+
+O código-fonte está concentrado no diretório `src`, onde os componentes da interface e seus respectivos estilos estão separados por responsabilidade.
 
 ```text
-src/
-├── assets/
-│   ├── icons/
-│   └── images/
-├── components/
-├── sections/
-├── App.tsx
-└── main.tsx
+petcure/
+├── public/
+├── src/
+│   ├── assets/
+│   │   ├── images/
+│   │   └── icons/
+│   ├── components/
+│   │   ├── Header/
+│   │   ├── Hero/
+│   │   ├── AboutUs/
+│   │   ├── Services/
+│   │   ├── Testimonials/
+│   │   ├── Gallery/
+│   │   ├── Footer/
+│   │   └── WhatsAppButton/
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── ...
+├── index.html
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
 ```
 
-## 📌 Status
+## ⚙️ Como Executar Localmente
 
-🚧 Em desenvolvimento.
+### Pré-requisitos
+
+Para executar a aplicação em ambiente local, você precisará de:
+
+- [Node.js](https://nodejs.org/)
+- npm, instalado junto com o Node.js.
+- [Git](https://git-scm.com/).
+
+### Instalação
+
+**1. Clone o repositório:**
+
+```bash
+git clone https://github.com/brenoDevx/petcure.git
+```
+
+**2. Entre no diretório:**
+
+```bash
+cd petcure
+```
+
+**3. Instale as dependências:**
+
+```bash
+npm install
+```
+
+**4. Inicie o ambiente de desenvolvimento:**
+
+```bash
+npm run dev
+```
+
+**5. Acesse a aplicação:**
+
+Após a inicialização, o Vite disponibilizará um endereço local no terminal. Por padrão:
+
+```text
+http://localhost:5173
+```
+
+### Build de produção
+
+Para gerar os arquivos da versão de produção:
+
+```bash
+npm run build
+```
+
+Os arquivos gerados ficarão disponíveis no diretório `dist/`.
 
 ---
-
